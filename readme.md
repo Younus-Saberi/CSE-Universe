@@ -27,9 +27,9 @@ The website is desgined and with simle HTML,CSS .It contains link of blog and do
 
 ## Tech Stack
 
-**Client:** HTML, CSS
+**Client:** HTML, CSS, Dotnet
 
-**Server:** Azure Services
+**Server:** Azure Services like Webapp,Cloud Shell
 
 
 ## 🧰 Languages and Tools:
