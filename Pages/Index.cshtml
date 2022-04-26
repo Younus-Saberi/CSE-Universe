@@ -1,0 +1,603 @@
+﻿@page
+@model IndexModel
+@{
+    ViewData["Title"] = "Home page";
+}
+
+<!doctype html>
+<html lang="en">
+
+<head>
+    <title>CSE-Universe</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css">
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/5.0.0-alpha1/css/bootstrap.min.css"
+        integrity="sha384-r4NyP46KrjDleawBgD5tp8Y7UzmLA05oM1iAEQ17CSuDqnUK2+k9luXQOfXJCJ4I" crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" href="css/site.css">
+    <style type="text/css">
+    </style>
+</head>
+
+<body>
+    <header class="main_header">
+        <div class="d-flex justify-content-center align-items-center flex-column py-5">
+            <h1 class="text-uppercase main_heading">CSE-Universe</h1>
+            <p class="main_heading__para">Welcome to my <span class="text-capitalize bg-dark text-white py-2 px-3">
+                    world of blog</span> </p>
+        </div>
+        <!-- //the main image -->
+        <div class="main_header__div d-flex align-items-start
+        justify-content-center  flex-column shadow pl-5">
+            <p>Younus Saberi</p>
+            <!-- <h2 class="text-uppercase">the Progammer guy</h2> -->
+            <h2 class="animateWord">
+                <span>He is</span>
+                <div>
+                    <!--        Use classes 2,3, or 4 to match the number of words -->
+                    <ul class="flip4">
+                        <li> a Progammer </li>
+                        <li> a Freelancer</li>
+                        <li> Awesome </li>
+                    </ul>
+                </div>
+            </h2>
+            <button class="text-uppercase">subscribe</button>
+        </div>
+    </header>
+    <!-- header ends -->
+    <!-- two sided blog part starts -->
+    <div class="container-fluid ">
+        <div class="row ">
+            <!-- to get the space form left and right -->
+            <div class="col-xl-10  col-lg-10 col-md-12 col-11 mx-auto my-5">
+                <div class="row gx-5 mx-sm-auto">
+                    <!-- left side of the blog  -->
+                    <div class="col-lg-8 col-md-11 col-11 mx-auto">
+                        <div class="row gy-5 ">
+                            <div class="col-12 card p-4 shadow blog_left__div">
+                                <div class="d-flex justify-content-center align-items-center flex-column pt-3 pb-5 ">
+                                    <h1 class="text-uppercase">Best blog and docs website 2022</h1>
+                                    <p class="blog_title"> </p>
+                                </div>
+                                <figure class="right_side_img mb-5">
+                                    <img src="data:image/png;base64,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"
+                                        class="img-fluid shadow">
+                                </figure>
+                                <p><span class="font-weight-bold"> <a href="https://www.geeksforgeeks.org/">Geeks For
+                                            Geeks</a></span> A good and beginner based website where you can access the
+                                    content related to CS and IT field</p>
+                                <p>
+                                    A overall website where you can get content related to your academics stuffs and
+                                    also can get industry level exposer content
+                                </p>
+                                <div class="d-flex justify-content-between left_div_btns">
+                                    <div>
+                                        <button class="left_div__like" id="like_btn"><i
+                                                class="fa fa-thumbs-up"></i>Like</button>
+                                    </div>
+                                    <div>
+                                        <button class="left_div__reply" onclick="reply('reply1')">Replies <badge
+                                                class="bg-white text-dark p-2">1</badge></button>
+                                    </div>
+                                </div>
+                                <div class="replies" id="reply1">
+                                    <div
+                                        class="d-flex justify-content-start flex-row align-items-center card reply_card py-3 ">
+                                        <div class=" reply_img mx-2 align-self-center ">
+                                            <img
+                                                src="https://img.icons8.com/doodle/48/000000/user-male-skin-type-5.png" />
+                                        </div>
+                                        <div class="reply_text__left">
+                                            <p class="blog_title "> <span class="font-weight-bold"> Younus, </span>
+                                                March 12, 2022, 7:20 PM </p>
+                                            <p>Awesome, Bro I love your content.</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- 2nd topic  -->
+                            <div class="col-12 card p-4 shadow blog_left__div">
+                                <div class="d-flex justify-content-center align-items-center flex-column pt-3 pb-5 ">
+                                    <h1 class="text-uppercase">Python</h1>
+
+                                </div>
+                                <figure class="right_side_img mb-5">
+                                    <img src="https://cdn-icons-png.flaticon.com/128/919/919852.png"
+                                        class="img-fluid shadow">
+                                </figure>
+                                <p><span class="font-weight-bold"><a
+                                            href="https://www.python.org/">Python.org</a></span>
+                                    Python is great programming language to kickstart your programming journey. It have
+                                    good user friendly syntax and easy to understand
+                                </p>
+                                <p>
+                                    Python is widely used in IT industry whether from web development to Machine
+                                    learning to Data Analytics it is used widely and proper till the date.
+                                </p>
+                                <div class="d-flex justify-content-between left_div_btns">
+                                    <div>
+                                        <button class="left_div__like" id="like_btn"><i
+                                                class="fa fa-thumbs-up"></i>Like</button>
+                                    </div>
+                                    <div>
+                                        <button class="left_div__reply" onclick="reply('reply2')">Replies <badge
+                                                class="bg-white text-dark p-2">2</badge></button>
+                                    </div>
+                                </div>
+                                <div class="replies" id="reply2">
+                                    <div
+                                        class="d-flex justify-content-start flex-row align-items-center card reply_card py-3 ">
+                                        <div class=" reply_img mx-2 align-self-center ">
+                                            <img
+                                                src="https://img.icons8.com/doodle/48/000000/user-male-skin-type-5.png" />
+                                        </div>
+                                        <div class="reply_text__left">
+                                            <p class="blog_title "> <span class="font-weight-bold"> Vinod, </span> Aug
+                                                11, 2020, 7:20 PM </p>
+                                            <p>I really like the blog Keep coming it up :)</p>
+                                        </div>
+                                    </div>
+                                    <div
+                                        class="d-flex justify-content-start flex-row align-items-center card reply_card py-3 ">
+                                        <div class=" reply_img mx-2 align-self-center ">
+                                            <img
+                                                src="https://img.icons8.com/doodle/48/000000/user-male-skin-type-5.png" />
+                                        </div>
+                                        <div class="reply_text__left">
+                                            <p class="blog_title "> <span class="font-weight-bold"> Younus, </span>
+                                                March 12, 2022, 7:20 PM </p>
+                                            <p>Awesome, Bro I love your content.</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- 3rd topic -->
+                            <div class="col-12 card p-4 shadow blog_left__div">
+                                <div class="d-flex justify-content-center align-items-center flex-column pt-3 pb-5 ">
+                                    <h1 class="text-uppercase">C++</h1>
+                                </div>
+                                <figure class="right_side_img mb-5">
+                                    <img src="https://cdn-icons-png.flaticon.com/128/6132/6132222.png"
+                                        class="img-fluid shadow">
+                                </figure>
+                                <p><span class="font-weight-bold"></span> <a
+                                        href="https://www.w3schools.com/CPP/default.asp">C++</a> A good and legendary
+                                    programming language . It is used to build major software application and operating
+                                    system . It is also called mother of all language</p>
+                                <p>
+                                    Every beginner in programming should try out C++ to great the leagacy of the IT
+                                    industry and get the feel how IT industry have changed and adapted to upcomig
+                                    technology.
+                                </p>
+                                <div class="d-flex justify-content-between left_div_btns">
+                                    <div>
+                                        <button class="left_div__like" id="like_btn"><i
+                                                class="fa fa-thumbs-up"></i>Like</button>
+                                    </div>
+                                    <div>
+                                        <button class="left_div__reply" onclick="reply('reply3')">Replies <badge
+                                                class="bg-white text-dark p-2">4</badge></button>
+                                    </div>
+                                </div>
+                                <div class="replies" id="reply3">
+                                    <div
+                                        class="d-flex justify-content-start flex-row align-items-center card reply_card py-3 ">
+                                        <div class=" reply_img mx-2 align-self-center ">
+                                            <img
+                                                src="https://img.icons8.com/doodle/48/000000/user-male-skin-type-5.png" />
+                                        </div>
+                                        <div class="reply_text__left">
+                                            <p class="blog_title "> <span class="font-weight-bold"> Arslaan, </span>
+                                                March 17, 2022, 10:20 PM </p>
+                                            <p>Awesome</p>
+                                        </div>
+                                    </div>
+                                    <div
+                                        class="d-flex justify-content-start flex-row align-items-center card reply_card py-3 ">
+                                        <div class=" reply_img mx-2 align-self-center ">
+                                            <img
+                                                src="https://img.icons8.com/doodle/48/000000/user-male-skin-type-5.png" />
+                                        </div>
+                                        <div class="reply_text__left">
+                                            <p class="blog_title "> <span class="font-weight-bold"> Younus, </span>
+                                                March 22, 2022, 11:20 PM </p>
+                                            <p>Great.</p>
+                                        </div>
+                                    </div>
+                                    <div
+                                        class="d-flex justify-content-start flex-row align-items-center card reply_card py-3 ">
+                                        <div class=" reply_img mx-2 align-self-center ">
+                                            <img
+                                                src="https://img.icons8.com/doodle/48/000000/user-male-skin-type-5.png" />
+                                        </div>
+                                        <div class="reply_text__left">
+                                            <p class="blog_title "> <span class="font-weight-bold"> vinod, </span> March
+                                                20, 2020, 7:00 PM </p>
+                                            <p>Informative</p>
+                                        </div>
+                                    </div>
+                                    <div
+                                        class="d-flex justify-content-start flex-row align-items-center card reply_card py-3 ">
+                                        <div class=" reply_img mx-2 align-self-center ">
+                                            <img
+                                                src="https://img.icons8.com/doodle/48/000000/user-male-skin-type-5.png" />
+                                        </div>
+                                        <div class="reply_text__left">
+                                            <p class="blog_title "> <span class="font-weight-bold"> Thapa, </span> March
+                                                21, 2021, 9:20 PM </p>
+                                            <p>Awesome, Bro I love your content.</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- 2nd topic  -->
+                            <div class="col-12 card p-4 shadow blog_left__div">
+                                <div class="d-flex justify-content-center align-items-center flex-column pt-3 pb-5 ">
+                                    <h1 class="text-uppercase">JavaScript</h1>
+
+                                </div>
+                                <figure class="right_side_img mb-5">
+                                    <img src="https://cdn-icons-png.flaticon.com/128/5968/5968292.png"
+                                        class="img-fluid shadow">
+                                </figure>
+                                <p><span class="font-weight-bold"><a
+                                            href="https://www.w3schools.com/js/">JavaScript</a></span>
+                                    JavaScript is the world's most popular programming language.
+
+                                    JavaScript is the programming language of the Web.
+
+                                    JavaScript is easy to learn.
+                                </p>
+
+                                <div class="d-flex justify-content-between left_div_btns">
+                                    <div>
+                                        <button class="left_div__like" id="like_btn"><i
+                                                class="fa fa-thumbs-up"></i>Like</button>
+                                    </div>
+                                    <div>
+                                        <button class="left_div__reply" onclick="reply('reply2')">Replies <badge
+                                                class="bg-white text-dark p-2">2</badge></button>
+                                    </div>
+                                </div>
+                                <div class="replies" id="reply2">
+                                    <div
+                                        class="d-flex justify-content-start flex-row align-items-center card reply_card py-3 ">
+                                        <div class=" reply_img mx-2 align-self-center ">
+                                            <img
+                                                src="https://img.icons8.com/doodle/48/000000/user-male-skin-type-5.png" />
+                                        </div>
+                                        <div class="reply_text__left">
+                                            <p class="blog_title "> <span class="font-weight-bold"> Vinod, </span> March
+                                                11, 2022, 7:20 PM </p>
+                                            <p>I really like the blog Keep coming it up :)</p>
+                                        </div>
+                                    </div>
+                                    <div
+                                        class="d-flex justify-content-start flex-row align-items-center card reply_card py-3 ">
+                                        <div class=" reply_img mx-2 align-self-center ">
+                                            <img
+                                                src="https://img.icons8.com/doodle/48/000000/user-male-skin-type-5.png" />
+                                        </div>
+                                        <div class="reply_text__left">
+                                            <p class="blog_title "> <span class="font-weight-bold"> Younus, </span>
+                                                March 12, 2022, 7:20 PM </p>
+                                            <p>Awesome, Bro I love your content.</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- 2nd topic  -->
+                            <div class="col-12 card p-4 shadow blog_left__div">
+                                <div class="d-flex justify-content-center align-items-center flex-column pt-3 pb-5 ">
+                                    <h1 class="text-uppercase">Kotlin</h1>
+
+                                </div>
+                                <figure class="right_side_img mb-5">
+                                    <img src="data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wCEAAkGBw0NDQ0NDQ0QDQ8NDQ0ODw0ODQ8ODQ4NFREXFiARFRMkHiggGBolJxMTITEtJSkrLjAuFx8zODMsNygtLi4BCgoKDg0OGhAQGy0lHSEvLi0tLS0tLTItKy0tKy0tLTUtLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLSstK//AABEIALsBDgMBEQACEQEDEQH/xAAbAAEAAgMBAQAAAAAAAAAAAAAAAQIEBgcFA//EAEAQAQABAgIECgcFBgcAAAAAAAABAgMEBgURITESFkFRU3STs9HSEyNSVGFicSIkMzWxMjSRocHwFEJDY4HC4f/EABsBAQACAwEBAAAAAAAAAAAAAAADBgEEBQIH/8QALxEBAAIBAQMMAwACAwAAAAAAAAECAwQFERITFSEiMTJRcZGhsdEzQVIjYRTh8f/aAAwDAQACEQMRAD8A7iAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAACAASAACAASAAAACASAAAAAAAAAAAAAAAAAAAADkenM26TtYzF2reLqpot4m9RRT6KxPBpiuYiNc063e0+jw2x1m1emY8ZcLLrMtctqxboif9MHjppb32rscP5E//AANP/PvP29U1eWf2mM6aW98q7HD+Rnm/T/z7z9tmmovPbKYzppX3yrscP5Dm/T/z7z9tqmWZTxz0r75V2OH8jPN+n/n3n7T1tvWt5v0tVMUxi6pmf9nD+RBqNPo8GOcmSN0R/uftLjx2yW4a9r1beZNIxERVi6qp5Z9FZj/q+eazat75ZnD1a/qP/Viw7Lw1pHHG+V+MukPeZ7O15Wpzjqf79o+k3Num/n3n7OMukPeZ7O15TnHU/wB+0fRzbpv595+zjLpD3mezteU5x1P9+0fRzbpv595+zjLpD3mezteVnnHU/wB+0fRzbpv595+ynMmkJmIjEVTMzqiIt2pmZ5v2SNoaqZ3Rb2j6YnZ2liN8195+276As4uLfDxl6a664iYt8GiItx8dURrlYdHXNFOLNbfM/roV7V2wzfdijdEfvxes3GqAAAAAAAAAAAAAAAAAAAA4TmT9/wAd1vEd5Kz6b8NPJVdTP+e/m82WxEsUuPTapdLLbpda3TNUxEbZndDxlzUw0m953RDfw8V7RWvbL2cLh4txz1Tvn+j5ntna99bk3R0UjshcdFoowV3z3pZDhN8GQAE0xMzERGuZnVERtmZIjf0MTO7plvmVsuRYiL9+Nd6Y100Tti1HmWTZ+gjHHHfvfCt6/Xzlngp3fls7rOUAAAAAAAAAAAAAAAAAAAAA4VmT8wx3W8R3krNpvw18lU1X57+bzU8IIlD1Ep6XTTTMzERGuZ3QxfJXHWbWndENzDFr2itemZevg8PFuNu2qd8/0h882zte2svwU7ke76BsvZ0aanFbvT7MlXph2FoeZgS8gMppiZmIiNczOqIjbMzzERMzuhiZiI3y33K+XIsRF+/Gu9Ma6aN8Wo8yybP2fGKOPJ3vhW9fr5yzwU7vy2V1nKSAAAAAAAAAAAAAAAAAAAAADhWZPzDHdbxHeSs2m/DXyVTVfnv5vOTtc1a921ibRWN8vdK2taK1jpelhMNFEa521T/L4KNtjattTPJ4+5Hu+i7E2RGmpymTvz7MqJV2YWJaJeJhlMPEwytEvEwLUxMzERGuZnVERtmZ5tTERMz0MTO6N8t9yvlyMPEX78RN6dtNO+LUeZY9n7PjH17974VzX7QnLPBTu/LZXWcpIAAAAAAAAAAAAAAAAAAAAAAOFZk/MMd1vEd5Kzab8NfJVNV+e/m86E0zERvlDWs2ndDPwtjg7Z/an+Sn7W2nOaeSxz1flf8AYWxY08RmzR157I8GVEq7MLQsimBMSjmGVolHMMrUxMzEREzMzERERrmZ5ohjhmZ3QTMRG+W/5Wy5GHiL9+Im9Ma6aZ2xajzO/oNBGPr373wrev185Z4Kd35bM6rlpAAAAAAAAAAAAAAAAAAAAAAABwrMn5hjut4jvJWbTTuw18lV1MTOe8R4vlhrPB2zv/RX9qbRm/8Aix9n7/2uWwti8lEZ80db9R4MmJV2YWxaJRWhlaJRTAsimGVqImZiIiZmZiIiI1zM80PHDM9EEzERvl0HKuW4w8RfvxE3pjXTTO2LUeZ29FoYxxx27fhXdfr5yzwU7vy2d03LSAAAAAAAAAAAAAAAAAAAAAAAADimnLWrH42qd/8Ai8Rq+HrJbOo1k8lXFTw6WxsvY8crOpy/ud8QxYlxrVWpaJQ2qytEobVZWiUVqsrRLxGObTw17ZYtaIjfL38i6QwcYuaL0artWqLFyqY9HwvZ+FU8k/3Njw7Evgxxlt0z4eCva7XTl6lO78umsuYkAAAAAAAAAAAAAAAAAAAAAAAAAHFswT9+xnWr/eS8WqtGl/DTyYUSgtVsJiUNqvS0SgtVlaJeOTm0xER0yxNorG+exiYnEa/s07uWef8A8W/ZWya4I5TJHW+Fc120OVngp3fljO929DnxLpGRs3+k4GDxdfrNlNm9V/qfJVPtc08v138HXaHh69Oz9wy31ygAAAAAAAAAAAAAAAAAAAAAAAABxXME/fsb1rEd5L3w9Cz6X8NPJgxKG1WwtEoLVelolFwTad0MTaKxvli4jEa/s07uWef4fRZ9mbLrhjlL974VfX7S5aZpTu/LHdtzYskSxISkiXScjZw9LwcHi6vWbKbV6qfxPkq+bmnl+u/g6/Q8H+TH2eDLfHKAAAAAAAAAAAAAAAAAAAAAAAAHE8wz9+xvWsR3ktqK9WFm0v4a+TBiUNqthaJQzSZncTaKxMz2MfEX9f2ad3LPP8Hf0Gz4xRx373wqO0tqTmngp3fl8HVcqthlNFkiWJSJYkJ6YSRLpWR84el4ODxdfrN1q9VP4vyVT7XNz/XfwddoeD/Jj7P3/plvblAAAAAAAAAAAAAAAAAAAAAAADiOYZ+/43reI7yXQrXqQs2l/DXyYMSjtSZ7EtrRWN89j43r3+WN3LPP9HU0mjjH17dqmbV2vOeeTx935fF0XHiwymrZIlrYE0WSyliyRLEh0T0JIl0vI+cPTcHCYur1uyLV6qfxflqn2v1+u/g67QzTr4+z4Zb05QAAAAAAAAAAAAAAAAAAAAAA4fmL9/xvW8R3kutirvpXyWPBeKYK2tPREPMuXOSP+Zb2DBFetPap21tsTqJ5PF0Uj3fJuOHEoZS1lIlrYZTRKRLWwJqyllNWyRJEpieb+Ju3pIl0vI+cPTcHCYuvVdjVTavVTsu/LVPt/r9d/A12h4OvTs+P+npvLlsAAAAAAAAAAAAAAAAAAAAAOWabydpK9isTdtWaZou371dNU3rcTNNVczGzXs3uvp9VhpSOLt8mvtDLqs9IxY+isR49rA4iaU6Cjt7fi2ecMHjPo4kbO1HhHqjiHpXoKO3t+LPOODxn0e42fn8I9TiHpXoKO3t+Jzlg8Z9HuNDn8I9TiHpXoKO3t+LPOWDxn0e40Wbwj1OIelego7e34s85YPGfRJGkyp4h6V6Cjt7fic5YPGfRJGmyHETSvQU9vb8TnLB4z6JIwXTxE0p0FPb2/E5y0/jPokjFY4iaU6Cnt7fizznp/GfRJFLHEXSnQU9vb8TnLT+M+j3ESmMjaUjbFmmNW6Yv29cT/FidpaeY3dPo9uiZWq0hTa9FpC1EVW4iKL0XKK/SU81WqdfC+PK4mp5Gbb8U9HgPca4AAAAAAAAAAAAAAAAAAAAgEgAAAAAgEgAAAMAyAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAP/9k="
+                                        class="img-fluid shadow">
+                                </figure>
+                                <p><span class="font-weight-bold"><a href="https://kotlinlang.org/">Kotlin</a></span>
+                                    A modern programming language that makes developers happier.
+                                    Used in developing the mobile app and software
+                                </p>
+
+                                <div class="d-flex justify-content-between left_div_btns">
+                                    <div>
+                                        <button class="left_div__like" id="like_btn"><i
+                                                class="fa fa-thumbs-up"></i>Like</button>
+                                    </div>
+                                    <div>
+                                        <button class="left_div__reply" onclick="reply('reply2')">Replies <badge
+                                                class="bg-white text-dark p-2">2</badge></button>
+                                    </div>
+                                </div>
+                                <div class="replies" id="reply2">
+                                    <div
+                                        class="d-flex justify-content-start flex-row align-items-center card reply_card py-3 ">
+                                        <div class=" reply_img mx-2 align-self-center ">
+                                            <img
+                                                src="https://img.icons8.com/doodle/48/000000/user-male-skin-type-5.png" />
+                                        </div>
+                                        <div class="reply_text__left">
+                                            <p class="blog_title "> <span class="font-weight-bold"> Vinod, </span> March
+                                                11, 2022, 7:20 PM </p>
+                                            <p>I really like the blog Keep coming it up :)</p>
+                                        </div>
+                                    </div>
+                                    <div
+                                        class="d-flex justify-content-start flex-row align-items-center card reply_card py-3 ">
+                                        <div class=" reply_img mx-2 align-self-center ">
+                                            <img
+                                                src="https://img.icons8.com/doodle/48/000000/user-male-skin-type-5.png" />
+                                        </div>
+                                        <div class="reply_text__left">
+                                            <p class="blog_title "> <span class="font-weight-bold"> Younus, </span>
+                                                March 12, 2022, 7:20 PM </p>
+                                            <p>Awesome, Bro I love your content.</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- 2nd topic  -->
+                            <div class="col-12 card p-4 shadow blog_left__div">
+                                <div class="d-flex justify-content-center align-items-center flex-column pt-3 pb-5 ">
+                                    <h1 class="text-uppercase">PHP</h1>
+
+                                </div>
+                                <figure class="right_side_img mb-5">
+                                    <img src="https://cdn-icons-png.flaticon.com/128/528/528261.png"
+                                        class="img-fluid shadow">
+                                </figure>
+                                <p><span class="font-weight-bold"><a
+                                            href="https://www.w3schools.com/php/">PHP</a></span>
+                                    PHP is a server scripting language, and a powerful tool for making dynamic and
+                                    interactive Web pages.
+
+                                    PHP is a widely-used, free, and efficient alternative to competitors such as
+                                    Microsoft's ASP.
+                                </p>
+
+                                <div class="d-flex justify-content-between left_div_btns">
+                                    <div>
+                                        <button class="left_div__like" id="like_btn"><i
+                                                class="fa fa-thumbs-up"></i>Like</button>
+                                    </div>
+                                    <div>
+                                        <button class="left_div__reply" onclick="reply('reply2')">Replies <badge
+                                                class="bg-white text-dark p-2">2</badge></button>
+                                    </div>
+                                </div>
+                                <div class="replies" id="reply2">
+                                    <div
+                                        class="d-flex justify-content-start flex-row align-items-center card reply_card py-3 ">
+                                        <div class=" reply_img mx-2 align-self-center ">
+                                            <img
+                                                src="https://img.icons8.com/doodle/48/000000/user-male-skin-type-5.png" />
+                                        </div>
+                                        <div class="reply_text__left">
+                                            <p class="blog_title "> <span class="font-weight-bold"> Vinod, </span> March
+                                                11, 2022, 7:20 PM </p>
+                                            <p>I really like the blog Keep coming it up :)</p>
+                                        </div>
+                                    </div>
+                                    <div
+                                        class="d-flex justify-content-start flex-row align-items-center card reply_card py-3 ">
+                                        <div class=" reply_img mx-2 align-self-center ">
+                                            <img
+                                                src="https://img.icons8.com/doodle/48/000000/user-male-skin-type-5.png" />
+                                        </div>
+                                        <div class="reply_text__left">
+                                            <p class="blog_title "> <span class="font-weight-bold"> Younus, </span>
+                                                March 12, 2022, 7:20 PM </p>
+                                            <p>Awesome, Bro I love your content.</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- 2nd topic  -->
+                            <div class="col-12 card p-4 shadow blog_left__div">
+                                <div class="d-flex justify-content-center align-items-center flex-column pt-3 pb-5 ">
+                                    <h1 class="text-uppercase">SQL</h1>
+
+                                </div>
+                                <figure class="right_side_img mb-5">
+                                    <img src="https://cdn-icons-png.flaticon.com/128/2772/2772128.png"
+                                        class="img-fluid shadow">
+                                </figure>
+                                <p><span class="font-weight-bold"><a
+                                            href="https://www.tutorialspoint.com/sql/index.htm#:~:text=SQL%20is%20Structured%20Query%20Language,language%20for%20Relational%20Database%20System.">SQL</a></span>
+                                    PHP is a server scripting language, and a powerful tool for making dynamic and
+                                    interactive Web pages.
+
+                                    PHP is a widely-used, free, and efficient alternative to competitors such as
+                                    Microsoft's ASP.
+                                </p>
+
+                                <div class="d-flex justify-content-between left_div_btns">
+                                    <div>
+                                        <button class="left_div__like" id="like_btn"><i
+                                                class="fa fa-thumbs-up"></i>Like</button>
+                                    </div>
+                                    <div>
+                                        <button class="left_div__reply" onclick="reply('reply2')">Replies <badge
+                                                class="bg-white text-dark p-2">2</badge></button>
+                                    </div>
+                                </div>
+                                <div class="replies" id="reply2">
+                                    <div
+                                        class="d-flex justify-content-start flex-row align-items-center card reply_card py-3 ">
+                                        <div class=" reply_img mx-2 align-self-center ">
+                                            <img
+                                                src="https://img.icons8.com/doodle/48/000000/user-male-skin-type-5.png" />
+                                        </div>
+                                        <div class="reply_text__left">
+                                            <p class="blog_title "> <span class="font-weight-bold"> Vinod, </span> March
+                                                11, 2022, 7:20 PM </p>
+                                            <p>I really like the blog Keep coming it up :)</p>
+                                        </div>
+                                    </div>
+                                    <div
+                                        class="d-flex justify-content-start flex-row align-items-center card reply_card py-3 ">
+                                        <div class=" reply_img mx-2 align-self-center ">
+                                            <img
+                                                src="https://img.icons8.com/doodle/48/000000/user-male-skin-type-5.png" />
+                                        </div>
+                                        <div class="reply_text__left">
+                                            <p class="blog_title "> <span class="font-weight-bold"> Younus, </span>
+                                                March 12, 2022, 7:20 PM </p>
+                                            <p>Awesome, Bro I love your content.</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!--  *******************************************************
+            **********************************************************.
+            right side of the div
+            *******************************************************
+            **********************************************************
+            -->
+
+
+
+                    <!-- tags -->
+                    <div class=" right_div_post">
+                        <div class="right_div__title py-4 pl-2 ">
+                            <h2>Tags</h2>
+                        </div>
+                        <div class="tags_main right_sub__div">
+                            <a href="https://youtu.be/5p8e2ZkbOFU" target="_thapa" class="badge shadow text-capitalize">
+                                html </a>
+                            <a href="#" class="badge shadow text-capitalize"> css </a>
+                            <a href="#" class="badge shadow text-capitalize"> js </a>
+                            <a href="#" class="badge shadow text-capitalize"> react </a>
+                            <a href="#" class="badge shadow text-capitalize"> vue </a>
+                            <a href="#" class="badge shadow text-capitalize"> php </a>
+                            <a href="#" class="badge shadow text-capitalize"> python </a>
+                            <a href="#" class="badge shadow text-capitalize"> kotlin </a>
+                            <a href="#" class="badge shadow text-capitalize"> c++ </a>
+                            <a href="#" class="badge shadow text-capitalize"> java </a>
+                        </div>
+                    </div>
+                    <!-- Inspiration -->
+                    <div class=" right_div_post">
+                        <div class="right_div__title py-4 pl-2 ">
+                            <h2>Inspiration</h2>
+                        </div>
+                        <div class="right_sub__div">
+                            <div class="row gx-3">
+                                <div class="col-6">
+                                    <figure>
+                                        <img src="data:image/jpeg;base64,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"
+                                            class="img-fluid shadow">
+                                    </figure>
+                                </div>
+                                <div class="col-6">
+                                    <figure>
+                                        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ97m-RHW2WuyBmKbf6Ooilz_LSYXWjECqIXA&usqp=CAU"
+                                            class="img-fluid shadow">
+                                    </figure>
+                                </div>
+                                <div class="col-6">
+                                    <figure>
+                                        <img src="data:image/jpeg;base64,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"
+                                            class="img-fluid shadow">
+                                    </figure>
+                                </div>
+                                <div class="col-6">
+                                    <figure>
+                                        <img src="data:image/jpeg;base64,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"
+                                            class="img-fluid shadow">
+                                    </figure>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Follow Me -->
+                    <div class=" right_div_post">
+                        <div class="right_div__title py-4 pl-2 ">
+                            <h2>Follow Me</h2>
+                        </div>
+                        <div class="right_sub__div d-flex justify-content-around">
+                            <a href="https://www.facebook.com/Younus.saberi"> <i
+                                    class="fab fa-facebook-square fa-3x"></i></a>
+                            <a href="https://www.instagram.com/_younus_29/" target="_thapa"> <i
+                                    class="fab fa-3x fa-instagram"></i></a>
+                            <a href="https://github.com/Younus-Saberi"> <i class="fab fa-3x fa-github-square"></i> </a>
+                            <a href="https://twitter.com/younussaberi"> <i class="fab fa-3x fa-twitter-square"></i></a>
+
+                            <a href="https://www.linkedin.com/in/younus-saberi-b6b0ab1a9/"> <i
+                                    class="fab fa-3x fa-linkedin"></i></a>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+    </div>
+    </div>
+    <footer>
+        <p class="text-center py-5 bg-light">design with love By Younus Saberi</p>
+    </footer>
+    <!-- Optional JavaScript -->
+    <!-- Popper.js first, then Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+        integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/5.0.0-alpha1/js/bootstrap.min.js"
+        integrity="sha384-oesi62hOLfzrys4LxRF63OJCXdXDipiYWBnvTl9Y9/TRlw5xlKIEHpNyvvDShgf/"
+        crossorigin="anonymous"></script>
+    <script type="text/javascript">
+        const like = document.getElementById('like_btn');
+        const singleClick = () => {
+            like.style.fontWeight = 'bold';
+            like.style.background = '#bbe1fa';
+            like.style.color = '#1b262c';
+            like.innerHTML = "✓ Liked";
+        }
+        const doubleClick = () => {
+            like.style.fontWeight = 'normal';
+            like.style.background = '#3282b8';
+            like.style.color = '#fff';
+            like.innerHTML = "Like";
+        }
+        var clickCount = 0;
+        like.addEventListener('click', function () {
+            clickCount++;
+            if (clickCount === 1) {
+                singleClickTimer = setTimeout(function () {
+                    clickCount = 0;
+                    singleClick();
+                }, 400);
+            } else if (clickCount === 2) {
+                clearTimeout(singleClickTimer);
+                clickCount = 0;
+                doubleClick();
+            }
+        }, false);
+        // show and hide the replies
+        const reply = (rep) => {
+            console.log('hi');
+            // debugger;
+            var res = document.getElementById(rep);
+            console.log(res);
+            if (res.className == "replies") {
+                res.className = "thapa_show";
+                res.style.WebkitTransition = 'all 0.3s ease';
+                // res.style.transition = 'all 0.3s ease';
+                // console.log(thapa_show);
+            } else if (res.className == 'thapa_show') {
+                // res.className = " ";
+                console.log('thapa show');
+                res.className = "replies";
+            }
+        }
+    </script>
+</body>
+
+</html>
