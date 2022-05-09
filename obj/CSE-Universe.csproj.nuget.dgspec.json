@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "D:\\Coding\\VsCode\\CSE-Universe\\CSE-Universe\\CSE-Universe.csproj": {}
+    "D:\\Coding\\VsCode\\CSE-Universe\\CSE-Universe.csproj": {}
   },
   "projects": {
-    "D:\\Coding\\VsCode\\CSE-Universe\\CSE-Universe\\CSE-Universe.csproj": {
+    "D:\\Coding\\VsCode\\CSE-Universe\\CSE-Universe.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\Coding\\VsCode\\CSE-Universe\\CSE-Universe\\CSE-Universe.csproj",
+        "projectUniqueName": "D:\\Coding\\VsCode\\CSE-Universe\\CSE-Universe.csproj",
         "projectName": "CSE-Universe",
-        "projectPath": "D:\\Coding\\VsCode\\CSE-Universe\\CSE-Universe\\CSE-Universe.csproj",
+        "projectPath": "D:\\Coding\\VsCode\\CSE-Universe\\CSE-Universe.csproj",
         "packagesPath": "C:\\Users\\91966\\.nuget\\packages\\",
-        "outputPath": "D:\\Coding\\VsCode\\CSE-Universe\\CSE-Universe\\obj\\",
+        "outputPath": "D:\\Coding\\VsCode\\CSE-Universe\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\91966\\AppData\\Roaming\\NuGet\\NuGet.Config"

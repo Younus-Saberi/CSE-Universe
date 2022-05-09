@@ -1,5 +1,5 @@
 {
-  "FilePath": "d:\\Coding\\VsCode\\CSE-Universe\\CSE-Universe\\CSE-Universe.csproj",
+  "FilePath": "d:\\Coding\\VsCode\\CSE-Universe\\CSE-Universe.csproj",
   "Configuration": {
     "ConfigurationName": "MVC-3.0",
     "LanguageVersion": "6.0",
@@ -16298,38 +16298,43 @@
   "RootNamespace": "CSE_Universe",
   "Documents": [
     {
-      "FilePath": "d:\\Coding\\VsCode\\CSE-Universe\\CSE-Universe\\Pages\\Error.cshtml",
+      "FilePath": "d:\\Coding\\VsCode\\CSE-Universe\\Pages\\Error.cshtml",
       "TargetPath": "Pages\\Error.cshtml",
       "FileKind": "mvc"
     },
     {
-      "FilePath": "d:\\Coding\\VsCode\\CSE-Universe\\CSE-Universe\\Pages\\_ViewStart.cshtml",
+      "FilePath": "d:\\Coding\\VsCode\\CSE-Universe\\Pages\\_ViewStart.cshtml",
       "TargetPath": "Pages\\_ViewStart.cshtml",
       "FileKind": "mvc"
     },
     {
-      "FilePath": "d:\\Coding\\VsCode\\CSE-Universe\\CSE-Universe\\Pages\\_ViewImports.cshtml",
+      "FilePath": "d:\\Coding\\VsCode\\CSE-Universe\\Pages\\Shared\\_Favicons.cshtml",
+      "TargetPath": "Pages\\Shared\\_Favicons.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "d:\\Coding\\VsCode\\CSE-Universe\\Pages\\_ViewImports.cshtml",
       "TargetPath": "Pages\\_ViewImports.cshtml",
       "FileKind": "mvc"
     },
     {
-      "FilePath": "d:\\Coding\\VsCode\\CSE-Universe\\CSE-Universe\\Pages\\Privacy.cshtml",
+      "FilePath": "d:\\Coding\\VsCode\\CSE-Universe\\Pages\\Privacy.cshtml",
       "TargetPath": "Pages\\Privacy.cshtml",
       "FileKind": "mvc"
     },
     {
-      "FilePath": "d:\\Coding\\VsCode\\CSE-Universe\\CSE-Universe\\Pages\\Shared\\_ValidationScriptsPartial.cshtml",
-      "TargetPath": "Pages\\Shared\\_ValidationScriptsPartial.cshtml",
-      "FileKind": "mvc"
-    },
-    {
-      "FilePath": "d:\\Coding\\VsCode\\CSE-Universe\\CSE-Universe\\Pages\\Shared\\_Layout.cshtml",
+      "FilePath": "d:\\Coding\\VsCode\\CSE-Universe\\Pages\\Shared\\_Layout.cshtml",
       "TargetPath": "Pages\\Shared\\_Layout.cshtml",
       "FileKind": "mvc"
     },
     {
-      "FilePath": "d:\\Coding\\VsCode\\CSE-Universe\\CSE-Universe\\Pages\\Index.cshtml",
+      "FilePath": "d:\\Coding\\VsCode\\CSE-Universe\\Pages\\Index.cshtml",
       "TargetPath": "Pages\\Index.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "d:\\Coding\\VsCode\\CSE-Universe\\Pages\\Shared\\_ValidationScriptsPartial.cshtml",
+      "TargetPath": "Pages\\Shared\\_ValidationScriptsPartial.cshtml",
       "FileKind": "mvc"
     }
   ],

@@ -20,7 +20,7 @@ body {
 
 :root {
     --bg-size: 100% 100%;
-    --main-color: #fff;
+    --main-color: rgb(241, 234, 234);
     --title: 'Josefin Sans', sans-serif;
     --font-para: 'David Libre', serif;
     --btn-color: #bbe1fa;
@@ -57,12 +57,13 @@ a:hover {
 }
 
 body {
-    background: hsl(84, 3%, 94%);
+    background: hsl(191, 84%, 95%);
 }
 
 .main_header__div {
     height: calc(100vh - 40vh);
-    background-image: linear-gradient(to right, rgba(0, 0, 0, 0.5) 50%, rgba(0, 0, 0, 0)), url('https://images.pexels.com/photos/380769/pexels-photo-380769.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260');
+    /* background:url(res/bg.gif) ; */
+    background-image: linear-gradient(to right, rgba(0, 0, 0, 0.5) 50%, rgba(0, 0, 0, 0)), url("https://c4.wallpaperflare.com/wallpaper/747/72/896/python-programming-code-computer-minimalism-wallpaper-preview.jpg");
     background-size: var(--bg-size);
 }
 
@@ -75,6 +76,7 @@ body {
 
 .main_heading__para {
     font-size: 2.2rem;
+    color: black;
 }
 
 .main_header__div p {
@@ -331,7 +333,7 @@ figure img:hover,
     background: #fff;
 }
 
-.right_sub__div .row {
+.right_sub__div .gx{
     margin-bottom: 2rem;
     padding-left: 1rem;
 }

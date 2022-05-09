@@ -41,4 +41,17 @@ The website is desgined and with simle HTML,CSS .It contains link of blog and do
 <img src="https://raw.githubusercontent.com/github/explore/80688e429a7d4ef2fca1e82350fe8e3517d3494d/topics/dotnet/dotnet.png" alt="dotnet" height="40" style="vertical-align:top; margin:4px">
 
 
-</p>
+
+## Setup and run dotnet webapp
+
+To create dotnet webapp
+
+```bash
+dotnet new webapp -o MyWebApp --no-https -f net6.0
+```
+
+To run and test webapp
+```bash
+cd webapp
+dotnet watch
+```
